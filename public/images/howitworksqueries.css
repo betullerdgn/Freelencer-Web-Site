@@ -1,0 +1,156 @@
+@media (max-width:85em) {
+
+  
+
+    /* texts */
+
+    .details-header {
+        font-size: 1.6rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 3.6rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-sign-in {
+        font-size: 14px;
+
+    }
+
+    .nav-item {
+        font-size: 0.9em;
+    }
+
+    .li-label {
+        font-size: 1.1rem;
+
+    }
+
+    .panel h3 {
+        font-size: 1.4rem;
+    }
+
+    .emp-h1 {
+        font-size: 1.6rem;
+
+    }
+
+    /* images */
+    .welcome-img {
+        width: 80%;
+        height: auto;
+    }
+
+    .welcome-left {
+        margin-left: 5%;
+        align-self: center;
+
+        gap: 10px;
+    }
+
+
+
+    .details-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width:63em) {
+    
+
+    .welcome-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 50px;
+        /* 
+font sizes 10/ 12 14 16 18 20 24 30 36 44 52 62 74 86 98
+
+spacing system 2 4 8 12 16 24 32 48 64 80 96 128 */
+
+    }
+
+
+    .welcome-left {
+        margin-left: 30px;
+        gap: 10px;
+    }
+
+    .details-container {
+        display: block;
+    }
+
+    .testimonials-container{
+        margin: 20px 10px 120px 26px;
+    }
+
+    .employee-details,
+    .employer-details {
+        margin: 20px auto;
+    }
+
+    .panel {
+        width: 5px;
+        height: 300px;
+
+        gap: 30px;
+    }
+
+    /* texts */
+    .welcome-text h1 {
+        font-size: 3.0rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-sign-in {
+        font-size: 12px;
+
+    }
+
+    .nav-item {
+        font-size: 0.7em;
+    }
+
+    .li-label {
+        font-size: 0.9rem;
+
+    }
+
+    .panel h3 {
+        font-size: 1.2rem;
+    }
+
+    .details-header {
+        font-size: 1.2rem;
+        margin-left: 10%;
+    }
+
+    .emp-h1 {
+        font-size: 1.4rem;
+    }
+
+
+
+    /* images */
+    .welcome-img {
+        width: 300px;
+    }
+
+    .details-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+
+
+
+}

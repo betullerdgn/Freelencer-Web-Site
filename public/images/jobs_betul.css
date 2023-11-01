@@ -1,0 +1,808 @@
+/*create jobs css*/
+/*radio butons try*/
+
+body{
+  background-color: red;
+}
+.radio-input {
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.radio-input input[type="radio"] {
+  display: none;
+}
+
+.radio-input label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f1f0f0;
+  border-radius: 5px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(36, 99%, 52%);
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input input[type="radio"]:checked + label:before {
+  background-color: #050343;
+  top: 0;
+}
+
+.radio-input input[type="radio"]:checked + label {
+  background-color: hsl(36, 99%, 52%);
+  color: #fff;
+  border-color: hsl(36, 99%, 52%);
+  animation: radio-translate 0.5s ease-in-out;
+}
+
+@keyframes radio-translate {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/*submit button*/
+.save-btn {
+  left: 2%;
+  margin-top: 1%;
+  height: 52px;
+  width: 12%;
+}
+
+button_submit {
+  top: 5%;
+  position: relative;
+  height: 50px;
+  border-radius: 50px;
+  border: 0;
+  background-color: hsl(36, 99%, 52%);
+  box-shadow: rgb(0 0 0 / 3%) 0 0 3px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+button_submit:hover {
+  letter-spacing: 3px;
+  background-color: rgb(33, 6, 71);
+  color: hsl(240, 20%, 97%);
+  box-shadow: rgb(33, 6, 71) 0px 7px 10px 0px;
+}
+
+button_submit:active {
+  letter-spacing: 3px;
+  background-color: rgb(33, 6, 71);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(15, 6, 30) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+/*card_create_job
+.card_create_job {
+  margin-left: 10%;
+  cursor: pointer;
+  width: 75%;
+  height: 110%;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 255, 0.2);
+  transition: all 0.2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+
+.card_create_job:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+}*/
+/*Input Box*/
+.input-style {
+  height: 10%;
+  width: 30%;
+  margin-left: 1%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+}
+
+.input-style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/*title*/
+.title {
+  font-size: medium;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*detail*/
+.detail {
+  font-size: medium;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*requirements*/
+.requirements {
+  font-size: medium;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*candidate_status*/
+.candidate_status {
+  font-size: medium;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*date*/
+.date {
+  font-size: medium;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*contact_info*/
+.contact_info {
+  font-size: medium;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-weight: bolder;
+}
+/*nav bar*/
+nav {
+  background-color: #200566;
+  height: 50px;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #D90429;
+}
+
+.navbar-toggle {
+  color: #D90429;
+}
+.col-md-9 .col-lg-9 {
+  margin-top: 10%;
+}
+.panel-body {
+  top: 2%;
+  height: 300px;
+}
+/* Bottom Nav Card*/
+
+.bottom_nav_card_main {
+  top: 98%;
+  bottom: 0%;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  height: 200px;
+  background-color: #0e044f;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: #555;
+}
+
+.social-icons a i.fa-facebook-f:before {
+  content: "\f09a";
+}
+.social-icons a i.fa-twitter:before {
+  content: "\f099";
+}
+.social-icons a i.fa-instagram:before {
+  content: "\f16d";
+}
+.social-icons a i.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+
+/* Text content */
+.bottom-card_main p {
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.bottom-card p.bottom_main {
+  text-align: center;
+  margin-top: 20px;
+}
+.bottom_nav_card_text_main {
+  color: #fff;
+}
+.bottom_nav_card_text2_main {
+  color: #fff;
+}
+/*-----------end of create jobs csss*/
+/*pop-up*/
+.containerpop {
+  display: flex;
+}
+
+.side-by-side {
+  flex: 1;
+}
+
+/*pop up try*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.some-text {
+  color: #515f65;
+  position: absolute;
+  top: 60%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.pure {
+  color: #e75480;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.buttonclose {
+  width: 12%;
+  margin-left: 2%;
+  background-color: rgb(11, 0, 84);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+}
+
+.button {
+  width: 3%;
+  height: 508px;
+  position: absolute;
+  background-color: #0e0442;
+  border: none;
+  color: rgb(240, 235, 235);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  border-radius: 100px;
+}
+.buttonsubmit {
+  background-color: #7257fa;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+}
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}
+/*------------*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.some-text2 {
+  color: #515f65;
+  position: absolute;
+  top: 60%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.pure2 {
+  color: #e75480;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.buttonclose2 {
+  background-color: #7257fa;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+}
+
+.button2 {
+  height: 48px;
+  position: absolute;
+  background-color: #0e0442;
+  border: none;
+  color: rgb(240, 235, 235);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  border-radius: 100px;
+}
+.buttonsubmit2 {
+  background-color: #7257fa;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  margin-top: 25px;
+}
+
+.popup2 {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup2:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.popup__text2 {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}
+
+/*Add jobs Button*/
+.create-job-btn {
+  position: relative;
+  height: 60px;
+  left: 85%;
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: hsl(36, 99%, 52%);
+  box-shadow: rgb(0 0 0 / 3%) 0 0 3px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.create-job-btn:hover {
+  letter-spacing: 3px;
+  background-color: rgb(33, 6, 71);
+  color: hsl(240, 20%, 97%);
+  box-shadow: rgb(33, 6, 71) 0px 7px 10px 0px;
+}
+
+.create-job-btn:active {
+  letter-spacing: 3px;
+  background-color: rgb(33, 6, 71);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(15, 6, 30) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+/*nav bar*/
+nav {
+  background-color: #200566;
+  height: 50px;
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.navbar-toggle {
+  color: #011072;
+}
+.col-md-9 .col-lg-9 {
+  margin-top: 10%;
+}
+.panel-body {
+  top: 2%;
+  height: 300px;
+}
+/* Bottom Nav Card*/
+
+.bottom_nav_card_main {
+  top: 98%;
+  bottom: 0%;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  height: 200px;
+  background-color: #0e044f;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: #555;
+}
+
+.social-icons a i.fa-facebook-f:before {
+  content: "\f09a";
+}
+.social-icons a i.fa-twitter:before {
+  content: "\f099";
+}
+.social-icons a i.fa-instagram:before {
+  content: "\f16d";
+}
+.social-icons a i.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+
+/* Text content */
+.bottom-card_main p {
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.bottom-card p.bottom_main {
+  text-align: center;
+  margin-top: 20px;
+}
+.bottom_nav_card_text_main {
+  color: #fff;
+}
+.bottom_nav_card_text2_main {
+  color: #fff;
+}
+.job_post_card {
+  --border-radius: 0.75rem;
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  position: absolute;
+  width: 63%;
+  height: 300px;
+  left: 2%;
+  top: 5%;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+}
+
+.job-update-btn{
+  position: absolute;
+  right:40px;
+  top: 10px;
+}
+.update{
+  background-color: #007bff;
+}
+.update:hover{
+  background-color: #71b5fe;
+}
+
+.delete{
+  background-color: coral;
+}
+
+.delete:hover{
+  background-color: rgb(255, 146, 106);
+}
+
+.job_post_card > * + * {
+  margin-top: 1.1em;
+}
+
+.job_post_card .candidate_status {
+  color: #6e6b80;
+  font-size: 1rem;
+}
+
+.job_post_card .card__content {
+  color: var(--secondary-color);
+  font-size: 1.7rem;
+}
+
+.job_post_card .card__title {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.job_post_card .card__date {
+  color: #6e6b80;
+  font-size: 1rem;
+}
+
+.job_post_card svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.job_post_card:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+
+
+.job_post_card{
+  height: max-content;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+th {
+  color: #e40c2b;
+}
+th,
+td {
+  width: 200px;
+  height: 30px;
+  text-align: flex-start;
+  padding: 15px;
+}
+
+/* accept-reject-button */
+.accept-reject-btn{
+  width: 60px;
+  height: 25px;
+  border-radius: 50px;
+  border: none;
+  padding: 2px;
+}
+.accept{
+  background-color: rgb(0, 133, 0);
+}
+
+.accept:hover{
+  background-color: rgb(116, 194, 0);
+}
+
+.reject{
+  background-color: red;
+}
+
+.reject:hover{
+  background-color: rgb(255, 93, 93);
+}
+
+.applications-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: end;
+
+}
+/* icons */
+
+

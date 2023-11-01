@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- css links -->
+    <link rel="stylesheet" href="/images/profile-queries.css">
+
+    <link rel="stylesheet" href="/images/profile.css">
+    <title>Profile</title>
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav class="nav-bar">
+            <div class="nav-bar-links">
+                <!-- <button data-text="Awesome" class="title_button">
+                    <span class="actual-text">HIVELANCE
+                        <span class="hover-text" aria-hidden="true">HIVELANCE </span>
+                </button> -->
+
+                <div class="nav-links">
+                    <nav>
+                        <ul>
+                            <li><span>
+                                    <p class="dashboard_link">
+                                        <a href="/home/dashboard">Dashboard</a>
+                                    </p>
+                                </span></li>
+                            <li>
+                                <span>
+                                    <p class="profile_link">
+                                        <a href="/home/profile">My Profile</a>
+                                    </p>
+                                </span>
+                            </li>
+                            <li><span>
+                                    <p class="jobs_link">
+                                        <a href="/home/jobs">My Jobs</a>
+                                    </p>
+                                </span></li>
+                            <li><span>
+                                    <p class="jobs_link">
+                                        <a href="/home/applications">My Applications</a>
+                                    </p>
+                                </span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+          
+        </nav>
+    </header>
+
+
+    <section class="profile-intro-container">
+
+        <div class="profile-intro-left">
+
+            <div class="profile-photo-cont">
+                 <% if (base64Data) { %> 
+                <img class="profile-photo" alt="User Pic" src="data:image/png;base64,<%= base64Data %>" class="img-circle img-responsive" /> -->
+                 <% } else { %> 
+                <img class="profile-photo" alt="User Pic" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    class="img-circle img-responsive" />
+                <% } %> 
+            </div>
+
+            <div class="cv-social-links">
+
+                <div class="social-links">
+                    <% if (data && data[0] && data[0].linkedin_link) { %>
+                      <a href="<%= data[0].linkedin_link %>">
+                        <ion-icon class="linkedin" name="logo-linkedin"></ion-icon>
+                      </a>
+                    <% } %>
+                  
+                    <% if (data && data[0] && data[0].twitter_link) { %>
+                      <a href="<%= data[0].twitter_link %>">
+                        <ion-icon class="twitter" name="logo-twitter"></ion-icon>
+                      </a>
+                    <% } %>
+                  
+                    <% if (data && data[0] && data[0].github_link) { %>
+                      <a href="<%= data[0].github_link %>">
+                        <ion-icon class="github" name="logo-github"></ion-icon>
+                      </a>
+                    <% } %>
+                  </div>
+                  
+
+                <div class="download-pdf">
+
+                    <button class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                        </span>
+                        <span><a href="/home/download-pdf/<%=userId %>" class="button-text">Download CV </a></span>
+
+                    </button>
+
+                   
+                </div>
+            </div>
+
+        </div>
+
+        <div class="profile-intro-right">
+
+            <h1 class="profile-text">Welcome to <%=data[0].first_name%>'s profile! </h1>
+            <table class="table table-user-information">
+                <tbody>
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <%=data[0].first_name%>
+                                <%=data[0].last_name%> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>User Name:</td>
+                        <td>
+                             <%=data[0].username%> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mobile:</td>
+                        <td>
+                             <%=data[0].mobile%> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <article class="user-details">
+
+        <div class="skills_card">
+            <p class="header-skills">My Skills</p>
+            <div class="body">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-percent-number">90%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 80%"></div>
+                    </div>
+                    <div class="skill-percent-number">80%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level">
+                        <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-percent-number">75%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="majority-minority-card">
+            <div class="majority-div">
+                <p class="majority-minority-card-heading  header-skills"> Majority</p>
+                <p class="majority-minority-card-title exp-text">
+                     <% if (data.length> 0 && data[0].job) { %>
+                    Majority: <%=data[0].job%>
+                        <% } else { %>
+                            No job found
+                            <% } %> 
+                </p>
+            </div>
+
+            <div class="minority-div">
+                <p class="majority-minority-card-heading  header-skills"> Minority</p>
+                <p class="majority-minority-card-title exp-text">
+                     <% if (data.length> 0 && data[0].minor) { %>
+                    Minority: <%=data[0].minor%>
+                        <% } else { %>
+                            No minority found
+                            <% } %> 
+                </p>
+
+            </div>
+        </div>
+
+
+        <div class="about_me">
+            <p class="about_me_heading header-skills">About Me</p>
+             <p class="about_me_title"></p> 
+             <% if (data[0].about_me) { %> 
+            <p class="about_me_detail exp-text">
+                 <%= data[0].about_me %> 
+            </p>
+             <% } else { %> 
+            <p class="about_me_detail exp-text">
+                No information available.
+            </p>
+             <% } %> 
+        </div>
+
+        <div class="student-status">
+            <p class="student-status-heading header-skills">Education Status</p>
+             <% if (data[0].education_statues) { %> 
+             <p class="student-status-detail">Status: <%= data[0].education_statues %> 
+            </p>
+             <% } else { %> 
+            <p class="sub-title">Status:</p>
+            <p class="student-status-detail exp-text"> No information available.</p>
+             <% } %> 
+             <% if (data[0].university_name) { %> 
+             <p class="student-status-detail">University: <%= data[0].university_name %> 
+            </p>
+            <% } else { %> 
+            <p class="sub-title">University:</p>
+            <p class="student-status-detail exp-text"> No information available.</p>
+             <% } %> 
+
+             <% if (data[0].school_name) { %> 
+             <p class="student-status-detail">Highschool: <%= data[0].school_name %> 
+            </p>
+             <% } else { %> 
+            <p class="sub-title">High School:</p>
+            <p class="student-status-detail exp-text"> No information available.</p>
+             <% } %> 
+        </div>
+
+        <div class="work_exp">
+            <p class="work_exp_heading header-skills ">Employment history</p>
+            <p class="work_exp_work_title sub-title">Job Title</p>
+            <p class="work_exp_detail exp-text">
+                This place will filled by the data gotten by user in the updeted
+                versions.
+            </p>
+        </div>
+
+        <div class="volunteer_exp">
+            <p class="volunteer_exp_heading header-skills">Volunteer Experience</p>
+            <p class="volunteer_exp_exp_detail exp-text">
+                 <% if (data[0].v_experience) { %>
+                    <%= data[0].v_experience %>
+                        <% } else { %>
+                            No volunteer experience available.
+                            <% } %> 
+            </p>
+        </div>
+
+
+    </article>
+
+    </>
+
+
+
+    <footer>
+        <p class="bottom_nav_card_text">Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="bottom_nav_card_text2">Copyright © 2023 WebSiteName</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@media screen and (max-width:74em) {
+    
+
+    /* containers */
+
+
+    .user-details{
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+
+
+    ion-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .linkedin, .twitter,.github{
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* texts */
+
+    h1.profile-text {
+        font-size: 2.6rem;
+        color: red;
+    }
+
+    .sub-title{
+        size:5rem;
+    }
+
+ 
+
+}

@@ -1,0 +1,260 @@
+/* Outher Card --------------*/
+.card {
+  position: absolute;
+  width: 1120px;
+  height: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-610px, -400px);
+  border-radius: 15px;
+  background: #e3f3ff;
+  /*box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;  */
+}
+
+.login-text {
+  color: #00303f;
+  font-size: medium;
+}
+
+/* Title-------------------*/
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  position: absolute;
+  width: 559px;
+  height: 116px;
+  left: 112px;
+  top: 129px;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: #00303f;
+  --animation-color: #0e044f;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: absolute;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/* Info Card -------------------*/
+
+.card1 {
+  position: absolute;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+  width: 345px;
+  height: 531px;
+  left: 200px;
+  top: 250px;
+  border-radius: 30px;
+  background: transparent;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
+}
+
+img {
+  height: 100½;
+  width: 100%;
+  size: 100%;
+  display: grid;
+  place-items: center;
+  left: 200px;
+}
+.card1 p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 80px 28px 106px 0px;
+  transition: all 0.5s;
+  background: #f6b637;
+  /*border: 2px solid #c7ea46;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card1 p:hover {
+  flex: 4;
+}
+
+.card1 p span {
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  border-radius: 30;
+  text-transform: uppercase;
+  color: #0e044f;
+  letter-spacing: 0.1em;
+}
+
+.card1 p:hover span {
+  transform: rotate(0);
+}
+
+/* Outher Card -------------------*/
+.card2 {
+  position: absolute;
+  width: 450px;
+  height: 730px;
+  left: 790px;
+  top: 57px;
+  bottom: 57px;
+  border-radius: 106px 28px 106px 0px;
+  background: #5dbeff;
+  /*box-shadow: 10px 10px 30px #5dbeff, -10px -10px 30px #5dbeff;*/
+}
+
+/* Form ----------------*/
+
+.singup {
+  color: #0e044f;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 770px;
+  width: 560px;
+  height: 500px;
+  top: 202px;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #0e044f;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #0e044f;
+  border-bottom: 2px solid #0e044f;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #0e044f;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #f6b637;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox1 input:valid ~ span,
+.inputBox1 input:focus ~ span {
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #f6b637;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+  border: 2px solid #f6b637;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid rgba(41, 50, 65);
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: #f6b637;
+  color: white;
+}
+
+body {
+  background-image: url("https://www.colorhexa.com/fcfcf5.png");
+  background-size: cover; /* Ekranın tamamını kaplaması için */
+  background-repeat: no-repeat; /* Tekrarlanmaması için */
+}

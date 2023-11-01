@@ -1,0 +1,275 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link href="/images/style-dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title></title>
+    <link rel="icon" type="image/png" href="https://coderszine.com/wp-content/themes/v2/cz.png" />
+    <link rel="stylesheet" href="style-dashboard.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    
+</head>
+
+<body>
+ 
+    <header>
+
+        <nav class="nav-bar">
+            <div class="nav-bar-links">
+                <!-- <button data-text="Awesome" class="title_button">
+                    <span class="actual-text">HIVELANCE
+                        <span class="hover-text" aria-hidden="true">HIVELANCE </span>
+                </button> -->
+
+                <div class="nav-links">
+                    <nav>
+                        <ul>
+                            <li><span>
+                                    <p class="dashboard_link">
+                                        <a href="/home/dashboard">Dashboard</a>
+                                    </p>
+                                </span></li>
+                            <li>
+                                <span>
+                                    <p class="profile_link">
+                                        <a href="/home/profile">My Profile</a>
+                                    </p>
+                                </span>
+                            </li>
+                            <li><span>
+                                    <p class="jobs_link">
+                                        <a href="/home/jobs">My Jobs</a>
+                                    </p>
+                                </span></li>
+                            <li><span>
+                                    <p class="jobs_link">
+                                        <a href="/home/applications">My Applications</a>
+                                    </p>
+                                </span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            
+        </nav>
+    </header>
+
+
+
+
+    <div class="welcomeback-card">
+        <img class="welcomecardimg"
+        
+        src="https://static.vecteezy.com/system/resources/previews/017/196/593/original/paper-plane-icon-design-on-transparent-background-free-png.png"
+        alt="Image Description"
+      />
+        <div>
+            <p class="welcometext1">Welcome Back! </p>
+        </div>
+        <div>
+            <p class="welcometext2">
+                <%= data.user[0].first_name %>
+            </p>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="group">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+                <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                </path>
+            </g>
+        </svg>
+
+
+        <input id="searchbar" onkeyup="search_jobs()" placeholder="Find a job..." type="text" name="search"
+            class="input" />
+    </div>
+
+
+    <div class="card_main_info">
+        <div class="card-info">
+            <div class="card-avatar"></div>
+            <div class="card-title">
+                <%= data.user[0].first_name %>
+                    <%= data.user[0].last_name %>
+            </div>
+            <div class="card-subtitle">CEO &amp; Co-Founder</div>
+        </div>
+        <ul class="card-social">
+            <li class="card-social__item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
+                    </path>
+                </svg>
+            </li>
+            <li class="card-social__item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
+                    </path>
+                </svg>
+            </li>
+            <li class="card-social__item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
+                    </path>
+                </svg>
+            </li>
+        </ul>
+    </div>
+
+
+    <% data.jobs.forEach(function(job, index) { %>
+        <div class="job_post_card">
+
+            <h3 class="card__title">
+                <%= job.jobTitle %>
+            </h3>
+            <p class="card__content">
+                <%= job.details %>
+            </p>
+            <div class="card__date">APPLICATION DUE: <%= job.lastDate %>
+            </div>
+            <div class="candidate_status">CANDIDATE STATUS: <%= job.candidateStatus %>
+            </div>
+            <div class="some-text">
+                <a class="button" href="#popup<%= index %>">Detail</a>
+            </div>
+        </div>
+        <hr>
+        <% }) %>
+
+            <% data.jobs.forEach(function(job, index) { %>
+                
+                
+                <div class="popup" id="popup<%= index %>">
+                    <div class="popup__content">
+
+                        <div class="popup-left">
+
+                            <div class="popup-texts">
+                                <h2 class="heading-secondary">
+                                    <%= job.jobTitle %>
+                                </h2>
+                                <h3 class="heading-tertiary">Important &ndash; Please read the requirements before
+                                    applying
+                                </h3>
+                             
+                                <h4 class="heading-tertiary">
+                                    <%= job.details %>
+                                </h4>
+                                <p class="requirements-details">
+                                    REQUIREMENTS
+                                <ul>
+                                    <li>
+                                        <%= job.candidate %>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div class="popup-buttons">
+                                <a href="#" class="buttonclose">Close</a>
+
+                                <form action="/home/dashboard/Apply" method="post">
+                                    <input type="hidden" name="jobID" value="<%= job.jobID %>">
+                                    <button type="submit" class="buttonapply">Apply</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="popup-right">
+                            <h2 class="heading-secondary">
+                                     Employer Info
+                            </h2>
+                            <div class="profile-photo-cont">
+                               
+                                <% if (job.profile_photo) { %>
+                                    <img src="data:image/png;base64,<%= job.profile_photo.toString('base64') %>" alt="Profile Photo" class="profile-photo-cont">
+                                  <% } else { %>
+                                    <img alt="User Pic" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="img-circle img-responsive" />
+                                  <% } %>
+                               
+                            </div>
+                            <p class="popup__text">
+                                email:
+                                <a href="mailto:<%= job.contactInfo %>">
+                                    <%= job.contactInfo %>
+                                </a>
+                               
+                                <p>Name-Surname :  <%= job.first_name  %>
+                                    <%= job.last_name  %>
+                                </p>
+
+                                <p>Phone-Number : <a href="https://web.whatsapp.com/"> <%= job.mobile %></a>
+
+                                </p>
+
+                                <form action="/home/otherProfile" method="post">
+                                    <input type="hidden" name="ownerID" value="<%= job.applicantID %>">
+                                    <button type="submit" class="buttonapply">view Employer profile </button>
+                                </form>
+                                    
+                                
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <% }) %>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff"
+                            d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z">
+                        </path>
+                    </svg>
+
+                    </div>
+                    <hr>
+
+
+
+                    </div>
+
+
+                    <div class="bottom_nav_card_main">
+                        <p class="bottom_nav_card_text_main">Follow us on social media:</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p class="bottom_nav_card_text2_main">Copyright © 2023 WebSiteName</p>
+                    </div>
+</body>
+
+<script>
+    function search_jobs() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('job_post_card');
+
+
+
+        for (i = 0; i < x.length; i++) {
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display = "none";
+            }
+            else {
+                x[i].style.display = "list-item";
+            }
+        }
+    }</script>
+
+</html>

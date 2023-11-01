@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header/ nav-bar */
+
+header {
+    border-bottom: rgb(18, 0, 138) solid 3px;
+}
+
+nav {
+
+
+    height: 40px;
+    width: 100%;
+}
+
+.nav-bar {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(18, 0, 138);
+
+}
+
+.nav-item {
+    color: #FFFFFF;
+
+    font-size: 1em;
+    outline-style: none;
+}
+
+
+
+.nav-links-ul {
+    list-style-type: none;
+
+    display: flex;
+
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+/* first section */
+
+
+.welcome-container {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+
+    justify-content: space-around;
+    gap: 100px;
+
+    padding-bottom: 30px;
+    
+
+     box-shadow: 5px 5px 5px  rgb(18, 0, 138);
+
+
+}
+
+
+.welcome-img{
+    width: 80%;
+}
+
+.welcome-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-text {
+    width: 450px;
+    
+}
+
+.welcome-text h1 {
+    color: rgb(11, 0, 84);
+    font-size: 4.4rem;
+    font-family: 'Pacifico';
+
+    font-weight: 400;
+}
+
+.welcome-text h2 {
+    font-family: 'Roboto Sans';
+    color: rgb(18, 0, 138);
+    font-size: 2.0rem;
+    font-weight: 100;
+}
+
+
+/* CSS */
+.btn-sign-in {
+    
+
+    width: max-content;
+    background: rgb(11, 0, 84);
+    border: 1px solid rgb(11, 0, 84);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.btn-sign-in:hover,
+.btn-sign-in:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: rgb(11, 0, 84);
+}
+
+.btn-sign-in:active {
+    opacity: .5;
+}
+
+
+
+
+/* aside /details*/
+.details-container {
+
+    margin: 20px auto 120px;
+    width: 80%;
+    height: max-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+}
+
+.details-header {
+    --c: rgb(18, 0, 138);
+    /* the color  */
+    --h: 1.2em;
+    /* the height */
+
+    line-height: var(--h);
+    
+    margin: 120px 0 20px 110px;
+
+    color: rgb(18, 0, 138);
+}
+
+.details-header h1{
+    font-size: 1.8em;
+}
+
+
+
+.details-ul-employer,
+.details-ul-employee {
+    list-style: none;
+}
+
+.details-icon{
+    width: 50px;
+    height: 50px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    margin: 20px;
+}
+
+.li-label{
+    font-size: 1.2rem;
+    
+}
+
+
+.employee-details,
+.employer-details {
+
+
+    border-bottom: rgb(11, 0, 84) 1px solid;
+    border-right: rgb(11, 0, 84) 1px solid;
+
+    border-radius: 0 20px 0 0;
+    margin: 20px 0;
+    padding: 30px 30px 30px 30px;
+
+}
+
+.employee-details:hover,
+.employer-details:hover {
+    box-shadow: rgb(18, 0, 138) 1px solid;
+}
+
+
+
+.emp-h1 {
+    margin: 20px 0 30px;
+    font-size: 1.8rem;
+}
+
+/* icons */
+.create-account-icon {
+    width: 48px;
+    height: 48px;
+
+}
+
+
+/* testimonials */
+
+
+.testimonials-container {
+    display: flex;
+    width: 90%;
+    margin: 20px auto 120px ;}
+
+.testimonials-header{
+    margin:0 0 0 110px;
+}
+
+
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    transition: flex 0.7s ease-in;
+
+    width: 10px;
+}
+
+.panel h3 {
+    font-size: 1.6rem;
+
+    padding: 0 20px;
+    
+    margin: 0;
+    opacity: 0;
+}
+
+
+.panel{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    justify-content: center;
+}
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3, h5 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+
+@media (max-width: 480px) {
+    .testimonials-container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+#panel-active {
+    background-color: #E40C2B;
+}
+
+
+.testimonials-container div:nth-child(2) {
+    background-color: #3CBCC3;
+}
+
+.testimonials-container div:nth-child(3) {
+    background-color: #EBA63F;
+}
+
+.testimonials-container div:nth-child(4) {
+    background-color: #E40C2B;
+}
+
+.testimonials-container div:nth-child(5) {
+    background-color: #3CBCC3;
+}
+
+/* footer */
+
+footer{
+    background-color:  rgb(11, 0, 84);
+    color: floralwhite  ;
+    width: 100%;
+    height: 100px;
+}

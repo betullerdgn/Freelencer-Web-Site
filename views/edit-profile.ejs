@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/images/style-edit-profile.css">
+    <link rel="stylesheet" href="/images/queries-edit-profile.css">
+    <script src="https://kit.fontawesome.com/43db50534d.js" crossorigin="anonymous"></script>
+
+    <title>Edit Profile</title>
+</head>
+
+
+<body>
+    <header>
+
+        <nav class="nav-bar">
+            <div class="nav-bar-links">
+                <!-- <button data-text="Awesome" class="title_button">
+                    <span class="actual-text">HIVELANCE
+                        <span class="hover-text" aria-hidden="true">HIVELANCE </span>
+                </button> -->
+
+                <div class="nav-links">
+                    <nav>
+                        <ul>
+                            <li><span>
+                                    <p class="link dashboard_link">
+                                        <a href="/home/dashboard">Dashboard</a>
+                                    </p>
+                                </span></li>
+                            <li>
+                                <span>
+                                    <p class="link profile_link">
+                                        <a href="/home/profile">My Profile</a>
+                                    </p>
+                                </span>
+                            </li>
+                            <li><span>
+                                    <p class="link jobs_link">
+                                        <a href="/home/jobs">My Jobs</a>
+                                    </p>
+                                </span></li>
+                            <li><span>
+                                    <p class="link jobs_link">
+                                        <a href="/home/applications">My Applications</a>
+                                    </p>
+                                </span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            
+        </nav>
+    </header>
+
+
+    <article>
+
+        <form action="/home/uploads" method="POST" enctype="multipart/form-data">
+
+
+            <div class="container">
+
+                <div class="profile-pic">
+
+                    <label class="-label" for="file">
+                        <span class="glyphicon glyphicon-camera"></span>
+
+                        <span>Change Image</span>
+                    </label>
+                    <input name="png" id="file" type="file" onchange="loadFile(event)" />
+                    <img src="" id="output" width="200" />
+                </div>
+
+                <div class="header">
+                    <h1 class="bigger-title">Edit Profile</h1>
+                    <h3 class="sub-title"> Let's make changes on your profile! </h3>
+
+
+                    <div class="form-box cv-upload">
+                        <label for="pdf">Upload your CV</label>
+                        <input type="file" name="pdf" id="pdf">
+                    </div>
+
+                </div>
+
+                <div class="edit-sections">
+                    <h3 class="section-title sub-title"> Sections</h3>
+                    <ul>
+                        <li>About Me</li>
+                        <li>Job fields
+                            <ul>
+                                <li class="sub-li">Majority</li>
+                                <li class="sub-li">Minority</li>
+                            </ul>
+                        </li>
+                        <li>Education
+                            <ul>
+                                <li class="sub-li"> Education status</li>
+                                <li class="sub-li">University</li>
+                                <li class="sub-li">HighSchool</li>
+                            </ul>
+                        </li>
+                        <li>Volunteer Experience</li>
+                        <li>Contact Links
+                            <ul>
+                                <li class="sub-li">Github Link</li>
+                                <li class="sub-li">Twitter Link</li>
+                                <li class="sub-li">Linkedin Link</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="form-box ">
+                    <div class="edit-div about-me">
+                        <p>About Me</p>
+                        <label for="about_me"></label>
+                        <textarea placeholder="About me..." name="about_me" id="about_me" cols="30"
+                            rows="10"></textarea>
+                    </div>
+
+                    <div class="edit-div job-title">
+                        <p>Majority</p>
+                        <label class="custom-select" for="styledSelect1">
+                            <select name="engineering" id="engineering-select">
+                                <option value="null"> Please, choose your majority!</option>
+                                <option value="computer_engineer">Computer Engineering</option>
+                                <option value="civil_engineer">Civil Engineering</option>
+                                <option value="electrical_engineer">Electrical Engineering</option>
+                                <option value="mechanical_engineer">Mechanical Engineering</option>
+                                <option value="chemical_engineer">Chemical Engineering</option>
+                                <option value="aerospace_engineer">Aerospace Engineering</option>
+                                <option value="industrial_engineer">Industrial Engineering</option>
+                                <option value="materials_engineer">Materials Engineering</option>
+                                <option value="biomedical_engineer">Biomedical Engineering</option>
+                                <option value="environmental_engineer">Environmental Engineering</option>
+                            </select>
+                        </label>
+
+
+                        <div class="edit-div-sub minority">
+                            <p>Minority</p>
+                            <label for="minor"></label>
+                            <input placeholder="Minority" class="inputs" type="text" name="minor" id="minor">
+
+                        </div>
+                    </div>
+
+                    <div class="edit-div education-status">
+                        <p>Education</p>
+                        <label for="Student_or_graduate"> </label>
+                        <input type="radio" id="Student" name="Student_or_graduate" value="Student">
+                        <label for="html">student</label>
+                        <input type="radio" id="graduate" name="Student_or_graduate" value="graduate">
+                        <label for="css">graduate</label>
+
+                        <div class="edit-div-sub user-box">
+                            <p>University</p>
+                            <label for="University"></label>
+                            <input placeholder="University" class="inputs" type="text" name="University"
+                                id="University">
+                        </div>
+
+                        <div class="edit-div-sub user-box">
+                            <p>High School</p>
+                            <label for="HighSchool"></label>
+                            <input placeholder="HighSchool" class="inputs" type="text" name="HighSchool"
+                                id="HighSchool">
+                        </div>
+                    </div>
+
+                    <div class="edit-div volunteer-experience">
+                        <p>Volunteer Experience</p>
+                        <label for="Volunteer Experience"></label>
+                        <textarea placeholder="Volunteer Experience" name="V_experience" id="about_me" cols="30"
+                            rows="10"></textarea>
+                    </div>
+
+                    <div class="edit-div contact-links">
+                        <p>Contact Links</p>
+                        <label for="Githup_link"> <i class="fa-brands fa-github fa-beat-fade fa-2xl"
+                                style="color: black;"></i></label>
+                        <input placeholder="Github" class="inputs" type="text" name="Githup_link" id="Githup_link">
+
+                        <label for="Twitter_link"> <i class="fa-brands fa-twitter fa-beat fa-2xl"
+                                style="color: white;"></i></label>
+                        <input placeholder="Twitter" class="inputs" type="text" name="Twitter_link" id="Twitter_link">
+
+                        <label for="linkedin_link"><i class="fa-brands fa-linkedin fa-beat fa-2xl"
+                                style="color: #1730ee;"></i></label>
+                        <input placeholder="Linkedin" class="inputs" type="text" name="linkedin_link"
+                            id="linkedin_link">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button class="save-btn" type="submit"> Save </button>
+
+
+        </form>
+    </article>
+
+</body>
+
+</html>

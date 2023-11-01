@@ -1,0 +1,225 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="/images/jobs_betul.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <title></title>
+  <link rel="icon" type="image/png" href="https://coderszine.com/wp-content/themes/v2/cz.png" />
+  <link rel="stylesheet" href="/images/jobs_betul.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="https://kit.fontawesome.com/43db50534d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="nav-bar">
+        <div class="nav-bar-links">
+            <!-- <button data-text="Awesome" class="title_button">
+                <span class="actual-text">HIVELANCE
+                    <span class="hover-text" aria-hidden="true">HIVELANCE </span>
+            </button> -->
+
+            <div class="nav-links">
+                <nav>
+                    <ul>
+                        <li><span>
+                                <p class="dashboard_link">
+                                    <a href="/home/dashboard">Dashboard</a>
+                                </p>
+                            </span></li>
+                        <li>
+                            <span>
+                                <p class="profile_link">
+                                    <a href="/home/profile">My Profile</a>
+                                </p>
+                            </span>
+                        </li>
+                        <li><span>
+                                <p class="jobs_link">
+                                    <a href="/home/jobs">My Jobs</a>
+                                </p>
+                            </span></li>
+                        <li><span>
+                                <p class="jobs_link">
+                                    <a href="/home/applications">My Applications</a>
+                                </p>
+                            </span></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+  <button class="create-job-btn">
+    <a class="create_job_link" href="#popup">Create<a />
+      <!--<span--
+        ><p class="create_job_link">
+          <a href="/home/create_job">Create</a>
+        </p></span-->
+      >
+  </button>
+  <div class="popup" id="popup">
+
+    <div class="popup__content">
+      <form action="/home/create_jobs_inSQL" method="POST">
+        <div class="card_create_job">
+          <p class="title">The Title of your Job</p>
+          <input placeholder="Enter text here" name="Title" class="input-style" type="text" />
+          <p class="detail">A Detailed Description</p>
+          <input placeholder="Enter text here" name="Description" class="input-style" type="text" />
+          <p class="requirements">Candidate Requirements</p>
+          <input placeholder="Enter text here" name="requirements" class="input-style" type="text" />
+          <p class="date">Last Applicateion Date</p>
+          <input placeholder="Enter text here" name="last_date" class="input-style" type="datetime-local" />
+          <div>
+            <p class="candidate_status">Candidate Status</p>
+            <div class="radio-input">
+              <input type="radio" id="value-1" name="value-radio" value="value-1" />
+              <label for="value-1">Beginner</label>
+              <input type="radio" id="value-2" name="value-radio" value="value-2" />
+              <label for="value-2">Intermediate</label>
+              <input type="radio" id="value-3" name="value-radio" value="value-3" />
+              <label for="value-3">Advance</label>
+            </div>
+          </div>
+
+          <p class="contact_info">Contact Info of the Employer</p>
+          <input placeholder="Enter your email" name="contact_info" class="input-style" type="email" />
+        </div>
+        <button class="save-btn" type="submit"> Create </button>
+      </form>
+
+      <a href="#" class="buttonclose">Close</a>
+
+
+    </div>
+  </div>
+
+  <% data.jobs.forEach(function(job) { %>
+    <div class="job_post_card">
+      <div class="job-update-btn">
+        <form action="/home/UpdateJob" method="post">
+          <input type="hidden" name="ID" value="<%= job.JobID %>">
+          <button class="accept-reject-btn update">
+            <p class="accept-reject-text">Update</p>
+          </button>
+        </form>
+        <form action="/home/DeleteJob" method="post">
+          <input type="hidden" name="ID" value="<%= job.JobID %>">
+          <button class="accept-reject-btn delete">
+            <p class="accept-reject-text">Delete</p>
+          </button>
+        </form>
+        
+        
+      </div>
+      <h3 class="card__title">
+        <%= job.jobTitle %>
+      </h3>
+      <p class="card__content">
+        <%= job.details %>
+      </p>
+      <div class="card__date">APPLICATION DUE: <%= job.lastDate %>
+      </div>
+      <div class="candidate_status">CANDIDATE STATUS: <%= job.candidateStatus %>
+      </div>
+      <hr>
+      <div class="cadidate_status"> APPLICANTS : </div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Status</th>
+        </tr>
+      </table>
+      <% if (data && data.applications_info && Array.isArray(data.applications_info)) { %>
+        <% data.applications_info.forEach(function(info) { %>
+          <div class="applications-container">
+            <table>
+
+              <tr>
+                <td>
+                  <form action="/home/otherProfile" method="post">
+                    <input type="hidden" name="ownerID" value="<%= info.applicantID %>">
+                    <button type="submit">
+                      <%= info.first_name %>
+                        <%= info.last_name %>
+                    </button>
+                  </form>
+                </td>
+                <td>
+                  <%= info.username %>
+                </td>
+                <% if (info.applicationStatus==='waiting' ) { %>
+                  <td><i class="fa-regular fa-hourglass-half"></i></td>
+                  <% } else if (info.applicationStatus==='accept' ) { %>
+                    <td><i class="fa-solid fa-circle-check fa-beat"></i>
+                      <% } else { %>
+                    <td><i class="fa-solid fa-circle-xmark"></i> </td>
+                    <% } %>
+
+
+
+                      </td>
+
+              </tr>
+            </table>
+            <form action="/home/acceptJob" method="post">
+              <input type="hidden" name="ID" value="<%= info.applicationID %>">
+              <button class="accept-reject-btn accept" type="submit">
+                <p class="accept-reject-text">Accept</p>
+              </button>
+            </form>
+
+            <form action="/home/rejectJob" method="post">
+              <input type="hidden" name="ID" value="<%= info.applicationID %>">
+              <button class="accept-reject-btn reject" type="submit">
+                <p class="accept-reject-text">Reject</p>
+              </button>
+            </form>
+            
+           
+
+
+          </div>
+
+
+          <% }) %>
+            <% } %>
+
+
+
+              <div class="some-text"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                <path fill="#fff"
+                  d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z">
+                </path>
+              </svg>
+    </div>
+    <hr>
+    <% }) %>
+
+
+
+      <div class="bottom_nav_card_main">
+        <p class="bottom_nav_card_text_main">Follow us on social media:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="bottom_nav_card_text2_main">Copyright © 2023 WebSiteName</p>
+      </div>
+</body>
+
+</html>

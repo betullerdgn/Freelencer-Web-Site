@@ -1,0 +1,94 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		 
+		<title></title>
+		<link rel="icon" type="image/png" href="https://coderszine.com/wp-content/themes/v2/cz.png">
+		 <link rel='stylesheet' href='/images/signin.css' />
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+		<link
+		  rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+	   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="card"></div>
+		<button data-text="Awesome" class="button">
+		  <span class="actual-text">HIVELANCE
+		  <span class="hover-text" aria-hidden="true">HIVELANCE </span>
+		</button>
+		<div class="card1">
+			<img src="images/picture.png" alt="Image Description" />
+		  </div> 
+		<div class="card2"></div>
+		<div class="card3" >
+			<p class="singup">SIGNUP</p>
+			<form class="form-horizontal" role="form" method="post" action="/signup">
+				<% if (message.length > 0) { %>
+				<div class="alert alert-success col-sm-12"><%= message %></div>
+				<% } %>
+				<div id="signupalert" style="display:none" class="alert alert-danger">
+					<p>Error:</p>
+					<span></span>
+				</div>
+				<div class="form-group">
+					
+					<div class="inputBox">
+						<input type="username" class="form-control" name="username" placeholder="username" required="required">
+						<span class="user">username</span>
+					</div>
+				</div>
+				<div class="form-group">
+				
+					<div class="inputBox">
+						<input type="password" class="form-control" name="password" placeholder="Password" required="required">
+						<span class="user">password</span>
+					</div>
+				</div>
+				<div class="form-group">
+					
+					<div class="inputBox">
+						<input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
+						<span class="user">First Name</span>
+					</div>
+				</div>
+				<div class="form-group">
+					
+					<div class="inputBox">
+						<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
+						<span class="user">Last Name</span>
+					</div>
+				</div>
+				<div class="form-group">
+					
+					<div class="inputBox">
+						<input type="number" class="form-control" name="mobile" placeholder="Mobile Number" required="required">
+						<span class="user">Phone-number</span>
+					</div>
+				</div>						
+				<div class="form-group">						            
+					<div class="col-md-offset-3 col-md-9">
+						<button id="btn-login" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+					</div>
+				</div>
+				<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+					<h8 style=" color: #8D99AE ;" >If yo have already an account </h8> 
+					<a href="/login" style=" color: #D90429 ;"  >Sign In Here</a>
+					</div>
+			</form>
+		</div>	 
+		<div class="bottom_nav_card_main">
+			<p class="bottom_nav_card_text_main">Follow us on social media:</p>
+			<div class="social-icons">
+			  <a href="#"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#"><i class="fab fa-twitter"></i></a>
+			  <a href="#"><i class="fab fa-instagram"></i></a>
+			  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<p class="bottom_nav_card_text2_main">Copyright © 2023 WebSiteName</p>
+		  </div> 
+	</body>
+</html>
+

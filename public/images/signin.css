@@ -1,0 +1,368 @@
+/*Bottom Nav Card*/
+
+
+*{
+  font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+.bottom_nav_card_main {
+  top: 90%;
+  margin-bottom: 0%;
+  bottom: 0%;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  margin-top: 3%;
+  height: 20%;
+  background-color: #161f6d;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-login{
+  background-color: #D90429;
+  color: #EDF2F4;
+}
+
+#btn-login:hover{
+  background-color: #e40c2b;
+  border-color: #111;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons a i {
+  font-size: 20px;
+  color: #555;
+}
+
+.social-icons a i.fa-facebook-f:before {
+  content: "\f09a";
+}
+.social-icons a i.fa-twitter:before {
+  content: "\f099";
+}
+.social-icons a i.fa-instagram:before {
+  content: "\f16d";
+}
+.social-icons a i.fa-linkedin-in:before {
+  content: "\f0e1";
+}
+
+/* Text content */
+.bottom-card_main p {
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.bottom-card p.bottom_main {
+  text-align: center;
+  margin-top: 20px;
+}
+.bottom_nav_card_text_main {
+  color: #fff;
+}
+.bottom_nav_card_text2_main {
+  color: #fff;
+}
+/*nav bar*/
+nav {
+  margin-bottom: 1%;
+  background-color: #200566;
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.navbar-toggle {
+  color: #011072;
+}
+.col-md-9 .col-lg-9 {
+  margin-top: 10%;
+}
+.panel-body {
+  top: 2%;
+  height: 300px;
+}
+/* Outher Card --------------*/
+.card {
+  margin-top: 5%;
+  margin-bottom: 30px;
+  position: absolute;
+  width: 96%;
+  height: 96%;
+  left: 42%;
+  top: 50%;
+  transform: translate(-610px, -400px);
+  border-radius: 15px;
+  background-color: #EDF2F4;
+  /* background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);*/
+  backdrop-filter: blur(500px);
+}
+.navbar-header {
+  color: #023047;
+}
+
+/* Title-------------------*/
+/* === removing default button style ===*/
+.button {
+  margin-top: 8%;
+  position: relative;
+  width: 15%;
+  height: 12%;
+  left: 18%;
+  top: 12%;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: #2B2D42;
+  --animation-color: #D90429;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: absolute;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+/* Info Card -------------------*/
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card1 {
+  margin-top: 20%;
+  position: absolute;
+  width: 30%;
+  height: 55%;
+  left: 17%;
+  top: 1%;
+  border-radius: 30px;
+  background: transparent;
+  display: flex;
+  gap: 5px;
+  padding: 0.4em;
+}
+
+/* Inner Card -------------------*/
+.card2 {
+  position: absolute;
+
+  width: 28%;
+  height: 75%;
+  left: 55%;
+  margin-top: 40%;
+  bottom: 57px;
+  border-radius: 106px 28px 106px 0px;
+  background-color: #29539b;
+  background-image: linear-gradient(
+    105deg,
+    #161f6d 0%,
+     #161f6d 74%
+  );
+
+  border: #14044f;
+  /*box-shadow: 10px 10px 30px #5dbeff, -10px -10px 30px #5dbeff;*/
+}
+
+/* Form ----------------*/
+
+.singup {
+  color: #EDF2F4;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+
+.card3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  width: 560px;
+  height: 500px;
+  top: 180px;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #EDF2F4;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid #14151f;
+  border-bottom: 2px solid #14151f;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: rgba(41, 50, 65);
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #e40c2b;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox1 input:valid ~ span,
+.inputBox1 input:focus ~ span {
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #e40c2b;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+  border: 2px solid #e40c2b;
+  border-radius: 8px;
+}
+.btn .btn-success {
+  background-color: #e40c2b;
+}
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #e40c2b;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: #e40c2b;
+  color: #100f0e;
+}
+
+body {
+  background-color: white;
+}
+
+.btn-success{
+  background-color: #D90429;
+}

@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <title></title>
+  <link rel="icon" type="image/png" href="https://coderszine.com/wp-content/themes/v2/cz.png" />
+  <link rel="stylesheet" href="/images/signin.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+  <!-- text styles links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+  <title>Sign in</title>
+
+</head>
+
+<body>
+  <div class="backimg"></div>
+
+  <div class="cardblur">
+    <div class="card"></div>
+  </div>
+  <button data-text="Awesome" class="button">
+    <span class="actual-text">HIVELANCE</span>
+    <span class="hover-text" aria-hidden="true">HIVELANCE</span>
+  </button>
+  <div class="card1">
+    <img src="images/picture.png" alt="Image Description" />
+  </div>
+  <div class="card2"></div>
+
+  <div class="card3">
+    <p class="singup">SING IN</p>
+    <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
+      <% if (message.length> 0) { %>
+        <div class="alert alert-danger col-sm-12">
+          <%= message %>
+        </div>
+        <% } %>
+          <div class="form-group">
+            <div class="inputBox">
+              <input id="login-username" type="text" class="form-control" name="username" required="required" />
+              <span>username</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="inputBox">
+              <input id="login-password" type="password" class="form-control" name="password" required="required" />
+              <span>password</span>
+            </div>
+          </div>
+          <div style="margin-top: 10px" class="form-group">
+            <div class="col-sm-12 controls">
+              <button id="btn-login" type="submit" class="btn">
+                Login
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12 control">
+              <div style="
+                border-top: 1px solid#D90429;
+                padding-top: 15px;
+                font-size: 85%;
+              ">
+                 <h8 style=" color: #8D99AE ;" >Don't have an account!</h1>
+                <a href="/signup" style="color: #D90429; font-weight: bold;" >Sign Up Here</a>
+              </div>
+            </div>
+          </div>
+    </form>
+  </div>
+  <div class="bottom_nav_card_main">
+    <p class="bottom_nav_card_text_main">Follow us on social media:</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="bottom_nav_card_text2_main">Copyright © 2023 WebSiteName</p>
+  </div>
+</body>
+
+</html>
